@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Talha Abdur Rahman</title>
+
+
+    <style>
+        #patterns-enabled {
+            width: 17px;
+            height: 17px;
+            vertical-align: middle;
+            margin-top: 0;
+            cursor: pointer;
+        }
+
+        #patterns-enabled-label {
+            cursor: pointer;
+        }
+
+        #container {
+            height: 420px;
+        }
+
+        #chart-wrap {
+            min-width: 350px;
+            max-width: 700px;
+            margin: 1em auto;
+            font-family: sans-serif;
+        }
+
+        .highcharts-figure,
+        .highcharts-data-table table {
+            margin: 1em auto;
+        }
+
+        .highcharts-data-table table {
+            font-family: Verdana, sans-serif;
+            border-collapse: collapse;
+            border: 1px solid #EBEBEB;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .highcharts-data-table caption {
+            padding: 1em 0;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .highcharts-data-table th {
+            font-weight: 600;
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table td,
+        .highcharts-data-table th,
+        .highcharts-data-table caption {
+            padding: 0.5em;
+        }
+
+        .highcharts-data-table thead tr,
+        .highcharts-data-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+        .highcharts-data-table tr:hover {
+            background: #f1f7ff;
+        }
+
+        .btn-fpr {
+            border-radius: 40px;
+            padding: 15px 15px;
+            outline: none;
+            outline: 0;
+        }
+
+        .btn-fpr-block {
+            display: block;
+            width: 10%;
+        }
+
+        .btn-fpr-primary {
+            background: #50bf9f;
+            border-color: #50bf9f;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/pattern-fill.js"></script>
+    <script src="https://code.highcharts.com/themes/high-contrast-light.js"></script>
+
+    <div id="chart-wrap">
+        <label id="patterns-enabled-label">
+            <input type="checkbox" id="patterns-enabled" checked>
+            Enable color patterns
+        </label>
+
+        <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+
+            </p>
+        </figure>
+    </div>
+
+
+
+
+    <script>
+
+
+        var clrs = Highcharts.getOptions().colors;
+        var pieColors = [clrs[2], clrs[0], clrs[3], clrs[1], clrs[4]];
+
+        function getPattern(i) {
+            return {
+                pattern: Highcharts.merge(Highcharts.patterns[i], {
+                    color: pieColors[i]
+                })
+            };
+        }
+
+        var patterns = [0, 1, 2, 3, 4].map(getPattern);
+
+        var chart = Highcharts.chart('container', {
+            chart: {
+                type: 'line'
+            },
+
+            title: {
+                text: 'Talha Abdur Rahman'
+            },
+
+            colors: patterns,
+
+            tooltip: {
+                valueSuffix: '',
+                borderColor: '#8ae'
+            },
+
+            plotOptions: {
+                series: {
+                    dataLabels: {
+                        enabled: true,
+                        connectorColor: '#777',
+                        format: '<b>{point.name}</b> {point.percentage:.1f}'
+                    },
+                    point: {
+                        events: {
+                            click: function () {
+                                window.location.href = this.website;
+                            }
+                        }
+                    },
+                    cursor: 'pointer',
+                    borderWidth: 3
+                }
+            },
+
+            series: [{
+                name: 'Working Hours',
+                data: [ {
+                    name: '04/01/2021',
+                    y: 5,
+
+                },
+                {
+                    name: '04/02/2021',
+                    y: 6,
+
+                },
+                {
+                    name: '04/03/2021',
+                    y:4,
+
+                },
+                {
+                    name: '04/04/2021',
+                    y: 5,
+
+                },
+                {
+                    name: '04/05/2021',
+                    y:2,
+
+                },
+                {
+                    name: '04/06/2021',
+                    y:6,
+
+                },
+                {
+                    name: '04/07/2021',
+                    y: 9,
+
+                },
+                {
+                    name: '04/08/2021',
+                    y:5,
+
+                },
+                {
+                    name: '04/09/2021',
+                    y: 5,
+
+                },
+                {
+                    name: '04/10/2021',
+                    y:5,
+
+                },
+                {
+                    name: '04/11/2021',
+                    y:12,
+
+                },
+                {
+                    name: '04/12/2021',
+                    y:10,
+
+                },
+                {
+                    name: '04/13/2021',
+                    y:7,
+
+                },
+                {
+                    name: '04/14/2021',
+                    y: 5,
+
+                },
+                {
+                    name: '04/15/2021',
+                    y: 8,
+
+                },
+                {
+                    name: '04/16/2021',
+                    y:8,
+
+                },
+                {
+                    name: '04/17/2021',
+                    y:8,
+
+                },
+                {
+                    name: '04/18/2021',
+                    y: 8,
+
+                },
+                {
+                    name: '04/19/2021',
+                    y: 9,
+
+                },
+                {
+                    name: '04/20/2021',
+                    y: 7,
+
+                },
+                {
+                    name: '04/21/2021',
+                    y:6,
+
+                },
+                {
+                    name: '04/22/2021',
+                    y:8,
+
+                },
+                {
+                    name: '04/23/2021',
+                    y:11,
+
+                },
+                {
+                    name: '04/24/2021',
+                    y:6,
+
+                },
+                {
+                    name: '04/25/2021',
+                    y: 3,
+
+                },
+                {
+                    name: '04/26/2021',
+                    y:10,
+
+                },
+                {
+                    name: '04/27/2021',
+                    y: 10,
+
+                },
+                {
+                    name: '04/28/2021',
+                    y:7,
+
+                },
+                {
+                    name: '04/29/2021',
+                    y: 6,
+
+                },
+                {
+                    name: '04/30/2021',
+                    y:8,
+
+                },
+                {
+                    name: '05/01/2021',
+                    y:9,
+
+                },
+                {
+                    name: '05/02/2021',
+                    y: 15,
+
+                },
+                {
+                    name: '05/03/2021',
+                    y:12,
+
+                },
+                {
+                    name: '05/04/2021',
+                    y:8,
+
+                },
+                {
+                    name: '05/05/2021',
+                    y: 11,
+
+                },
+                {
+                    name: '05/06/2021',
+                    y: 9,
+
+                },
+                {
+                    name: '05/07/2021',
+                    y:7,
+
+                },
+                {
+                    name: '05/08/2021',
+                    y:8,
+
+                },
+                {
+                    name: '05/09/2021',
+                    y:7,
+
+                },
+             
+                {
+                    name: '05/10/2021',
+                    y: 6,
+
+                }]
+            }],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        plotOptions: {
+                            series: {
+                                dataLabels: {
+                                    format: '<b>{point.name}</b>'
+                                }
+                            }
+                        }
+                    }
+                }]
+            }
+        });
+
+        // Toggle patterns enabled
+        document.getElementById('patterns-enabled').onclick = function () {
+            chart.update({
+                colors: this.checked ? patterns : pieColors
+            });
+        };
+
+    </script>
+    <!-- <form action="/pie" method="POST">
+        <button class=" btn-fpr-block btn-fpr-primary btn-fpr" onclick="document.location='default.asp'">Next</button>
+    </form> -->
+</body>
+
+</html>
