@@ -19,17 +19,13 @@ def startpy():
     return render_template("index.html") 
 
 
-@app.route("/ak", methods=["GET","POST"])
-def ak():
-    return render_template('ak.html')
+
 
 @app.route("/aj", methods=["GET","POST"])
 def aj():
     return render_template('aj.html')
 
-@app.route("/aksha", methods=["GET","POST"])
-def aksha():
-    return render_template('aksha.html')
+
 
 @app.route("/ana", methods=["GET","POST"])
 def ana():
@@ -47,9 +43,7 @@ def ish():
 def akash():
     return render_template('akash.html')
 
-@app.route("/muz", methods=["GET","POST"])
-def muz():
-    return render_template('muz.html')
+
 
 @app.route("/noor", methods=["GET","POST"])
 def noor():
@@ -79,17 +73,12 @@ def ved():
 # def vedha():
 #     return render_template('vedha.html') 
 
-@app.route("/ajaykumaar", methods=["GET","POST"])
-def ajaykumaar():
-    return render_template('ajaykumaar.html')
 
 @app.route("/ajesh", methods=["GET","POST"])
 def ajesh():
     return render_template('ajesh.html')
 
-@app.route("/akshara", methods=["GET","POST"])
-def akshara():
-    return render_template('akshara.html')
+
 
 @app.route("/anajessica", methods=["GET","POST"])
 def anajessica():
@@ -107,9 +96,7 @@ def ishita():
 def mohith():
     return render_template('mohith.html')
 
-@app.route("/muzammil", methods=["GET","POST"])
-def muzammil():
-    return render_template('muzammil.html')
+
 
 @app.route("/noormohideen", methods=["GET","POST"])
 def noormohideen():
