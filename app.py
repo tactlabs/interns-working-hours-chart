@@ -69,58 +69,7 @@ def tal():
 def ved():
     return render_template('ved.html')    
 
-# @app.route("/vedha", methods=["GET","POST"])
-# def vedha():
-#     return render_template('vedha.html') 
 
-
-@app.route("/ajesh", methods=["GET","POST"])
-def ajesh():
-    return render_template('ajesh.html')
-
-
-
-@app.route("/anajessica", methods=["GET","POST"])
-def anajessica():
-    return render_template('anajessica.html')
-
-@app.route("/aswin", methods=["GET","POST"])
-def aswin():
-    return render_template('aswin.html')
-
-@app.route("/ishita", methods=["GET","POST"])
-def ishita():
-    return render_template('ishita.html')
-
-@app.route("/mohith", methods=["GET","POST"])
-def mohith():
-    return render_template('mohith.html')
-
-
-
-@app.route("/noormohideen", methods=["GET","POST"])
-def noormohideen():
-    return render_template('noormohideen.html')
-
-@app.route("/prakash", methods=["GET","POST"])
-def prakash():
-    return render_template('prakash.html')
-
-@app.route("/praveena", methods=["GET","POST"])
-def praveena():
-    return render_template('praveena.html')
-
-@app.route("/sudarshini", methods=["GET","POST"])
-def sudarshini():
-    return render_template('sudarshini.html')
-
-@app.route("/talha", methods=["GET","POST"])
-def talha():
-    return render_template('talha.html')
-
-@app.route("/vedha", methods=["GET","POST"])
-def vedha():
-    return render_template('vedha.html') 
 '''
 http://0.0.0.0:3091/api/data
 '''
